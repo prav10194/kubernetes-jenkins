@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/index.css') }}">
         <!-- <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/bootstrap.css') }}"> -->
     
@@ -11,6 +12,9 @@
     <body>
         <div class="container">
             <div class="civilizationNameContainer">
+                <div class="aoelogoDiv">
+                    <img class="aoelogo" src="{{ url_for('static', filename='assets/logo.png') }}"/> 
+                </div>      
                 <input class="civilizationNameInput" id="civilizationNameInput" type="text" style="text-transform:uppercase" placeHolder="Enter civilization name (e.g. Chinese)"/>
                 <div class="civilizationNameButton" id="civilizationNameButton" >GET INFO</div>
                 <div class="civilizationDescription" id="civilizationDescription">
