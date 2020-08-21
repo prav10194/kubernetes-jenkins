@@ -39,10 +39,10 @@ spec:
                     cat > ~/.netrc << EOF
 machine api.heroku.com
   login $EMAIL_ID
-  password $HEROKU_API_KEY
+  password $API_KEY
 machine git.heroku.com
   login $EMAIL_ID
-  password $HEROKU_API_KEY
+  password $API_KEY
 EOF
                     '''
                 }
