@@ -48,7 +48,7 @@ EOF
         stage ('Create Heroku App') {
             steps {
                 container('heroku') {
-                    sh 'echo "mkdir myapp && cd myapp && heroku create'
+                    sh 'mkdir myapp && cd myapp && heroku create'
                 }
             }
         }
