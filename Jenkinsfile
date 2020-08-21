@@ -31,14 +31,14 @@ spec:
         stage ('Configuring authentication') {
             steps {
                 container('heroku') {
-                    sh 'echo "Container 1" && ls -la'
+                    sh 'echo "Container 1" && ls -la /'
                 }
             }
         }
         stage ('Create Heroku App') {
             steps {
                 container('heroku') {
-                    sh 'echo "Container 2" && ls -la'
+                    sh 'echo "Container 2" && ls -la /'
                 }
             }
         }
