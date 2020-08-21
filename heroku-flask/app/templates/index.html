@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/index.css') }}">
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/bootstrap.css') }}"> -->
+    
+        <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:200" rel="stylesheet"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="civilizationNameContainer">
+                <input class="civilizationNameInput" id="civilizationNameInput" type="text" style="text-transform:uppercase" placeHolder="Enter civilization name (e.g. Chinese)"/>
+                <div class="civilizationNameButton" id="civilizationNameButton" >GET INFO</div>
+                <div class="civilizationDescription" id="civilizationDescription">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
