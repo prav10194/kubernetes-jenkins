@@ -48,8 +48,8 @@ EOF
         stage ('Create Heroku App') {
             steps {
                 container('heroku') {
-                    sh '''git clone https://github.com/heroku/python-getting-started.git && \
-                    cd python-getting-started && heroku create && \
+                    sh '''git clone https://github.com/prav10194/kubernetes-jenkins && \
+                    cd heroku-flask && heroku create && \
                     git push heroku master && heroku ps:scale web=1'''
                 }
             }
