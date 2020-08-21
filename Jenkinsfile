@@ -9,9 +9,6 @@ metadata:
   labels:
     some-label: heroku
 spec:
-  securityContext:
-    runAsUser: 10000
-    runAsGroup: 10000
   containers: 
     - name: jnlp
       image: 'odureg.azurecr.io/jnlp-slave:4.3-4-alpine'
@@ -35,7 +32,7 @@ spec:
         stage ('Configuring authentication') {
             steps {
                 container('heroku') {
-                    sh '''
+                    sh '''echo id && 
                     cat > ~/.netrc << EOF
 machine api.heroku.com
   login $EMAIL_ID
