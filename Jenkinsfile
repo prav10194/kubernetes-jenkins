@@ -27,11 +27,24 @@ spec:
 """
     }
     }
+    environment {
+        EMAIL_ID = credentials('HEROKU_ID')
+        API_KEY = credentials ('HEROKU_API_KEY')
+    }
     stages {
         stage ('Configuring authentication') {
             steps {
                 container('heroku') {
-                    sh 'echo "Container 1" && ls -la /'
+                    sh '''
+                    cat > ~/.netrc << EOF
+machine api.heroku.com
+  login $EMAIL_ID
+  password $HEROKU_API_KEY
+machine git.heroku.com
+  login $EMAIL_ID
+  password $HEROKU_API_KEY
+EOF
+                    '''
                 }
             }
         }
