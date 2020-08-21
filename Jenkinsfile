@@ -49,7 +49,9 @@ EOF
             steps {
                 container('heroku') {
                     sh '''git clone https://github.com/prav10194/kubernetes-jenkins && \
-                    cd heroku-flask && heroku create && \
+                    cd heroku-flask && \
+                    git init && git add . && git commit -m "Adding files" && \
+                    heroku create && \
                     git push heroku master && heroku ps:scale web=1'''
                 }
             }
