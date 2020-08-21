@@ -14,7 +14,7 @@ spec:
       image: 'odureg.azurecr.io/jnlp-slave:4.3-4-alpine'
       args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
     - name: heroku
-      image: pranavbhatia/heroku:0.2
+      image: pranavbhatia/heroku:0.3
       volumeMounts:
       - name: var-run
         mountPath: /var/run
