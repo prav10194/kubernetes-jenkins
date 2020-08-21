@@ -50,6 +50,8 @@ EOF
                 container('heroku') {
                     sh '''git clone https://github.com/prav10194/kubernetes-jenkins && \
                     cd heroku-flask && \
+                    git config --global user.email "user.name@example.com" && \
+                    git config --global user.name "User Name" && \
                     git init && git add . && git commit -m "Adding files" && \
                     heroku create && \
                     git push heroku master && heroku ps:scale web=1'''
