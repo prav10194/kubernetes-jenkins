@@ -32,7 +32,7 @@ spec:
         stage ('Configuring authentication') {
             steps {
                 container('heroku') {
-                    sh '''echo id && 
+                    sh ''' 
                     cat > ~/.netrc << EOF
 machine api.heroku.com
   login $EMAIL_ID
@@ -48,7 +48,7 @@ EOF
         stage ('Create Heroku App') {
             steps {
                 container('heroku') {
-                    sh 'echo "Container 2" && ls -la /'
+                    sh 'echo "mkdir myapp && cd myapp && heroku create'
                 }
             }
         }
